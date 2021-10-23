@@ -1,1 +1,247 @@
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    transition: all .3s ease-in-out;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --whiteColor: #ffffff;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    font-size: 13px;
+    background-color: var(--grayishBlue);
+}
+
+h2,
+h3 {
+    color: var(--veryDarkGrayishBlue);
+    font-weight: 700;
+}
+
+p {
+    color: var(--desaturatedDarkBlue);
+}
+
+img {
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 75px 25px 80px 25px;
+    min-height: 100vh;
+}
+
+.wrapper .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--whiteColor);
+    border-radius: 10px;
+}
+
+.container .top {
+    width: 100%;
+}
+
+.container .top img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.container .bottom {
+    padding: 0 30px;
+    position: relative;
+}
+
+.bottom h2 {
+    margin: 40px 0 20px 0;
+    font-size: 1.3em;
+
+}
+
+.bottom p {
+    margin-bottom: 35px;
+}
+
+.bottom .profile {
+    display: flex;
+    gap: 15px;
+}
+
+.profile .profile-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile .share {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--lightGrayishBlue);
+    cursor: pointer;
+    margin-left: 23px;
+    z-index: 1;
+}
+
+.profile .share i {
+    color: var(--grayishBlue);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.4;
+}
+
+.social-media {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .5s ease-in-out;
+}
+
+.social-media ul {
+    background-color: var(--veryDarkGrayishBlue);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 37px 5px;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+}
+
+.social-media ul li {
+    margin-left: 20px;
+    color: var(--lightGrayishBlue);
+
+}
+
+.social-media ul li:first-child {
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.social-media ul li a {
+    font-size: 1.4em;
+    color: var(--whiteColor);
+}
+
+ .active {
+        transform: scaleY(1);
+
+    }
+
+@media(min-width: 1000px) {
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .wrapper .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 731px;
+        margin: 0 auto;
+    }
+
+    .container .top {
+        width: 600px;
+        height: 291px;
+    }
+
+    .container .top img {
+        border-radius: 10px 0 0 10px;
+        height: 100%
+    }
+
+    .container .bottom {
+        position: relative;
+    }
+
+    .profile {
+        position: relative;
+    }
+
+    .profile .share {
+        margin-left: 140px;
+        margin-top: 0;
+    }
+
+    .social-media {
+        position: absolute;
+        top: 108px;
+        left: 269px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .5s ease-in-out;
+        width: 248px;
+    }
+
+    .social-media ul {
+        background-color: var(--veryDarkGrayishBlue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 35px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .social-media ul li {
+        margin-left: 16px;
+        color: var(--lightGrayishBlue);
+
+    }
+
+    .social-media ul li:first-child {
+        opacity: 0.5;
+        letter-spacing: 2px;
+    }
+
+    .social-media ul li a {
+        font-size: 1.4em;
+        color: var(--whiteColor);
+    }
+
+    .social-media ul::before {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: var(--veryDarkGrayishBlue);
+        border-width: 10px;
+        top: 65px;
+        left: 115px;
+    }
+
+    .active {
+        transform: scaleY(1);
+
+    }
+}
